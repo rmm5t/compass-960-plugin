@@ -1,8 +1,9 @@
 !ninesixty_font_family ||= "Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif"
+!ninesixty_font_size ||= 13px
 
-=text(!font_family = !ninesixty_font_family)
+=text(!font_family = !ninesixty_font_family, !font_size = !ninesixty_font_size)
   body
-    :font= "13px/1.5" !font_family
+    :font= !font_size + "/1.5" !font_family
 
   a:focus
     :outline 1px dotted invert
@@ -15,22 +16,22 @@
     :height 0
 
   h1
-    :font-size 25px
+    :font-size= !font_size + 12px
 
   h2
-    :font-size 23px
+    :font-size= !font_size + 10px
 
   h3
-    :font-size 21px
+    :font-size= !font_size + 8px
 
   h4
-    :font-size 19px
+    :font-size= !font_size + 6px
 
   h5
-    :font-size 17px
+    :font-size= !font_size + 4px
 
   h6
-    :font-size 15px
+    :font-size= !font_size + 2px
 
   ol
     :list-style decimal
